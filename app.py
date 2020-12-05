@@ -128,6 +128,8 @@ def generateCommentMsg(data):
         msg = 'note to Issue'
     elif ntype == 'Snippet':
         msg = 'note on code snippet'
+    msg = '[{0}]({1})'\
+        .format(msg, data['object_attributes']['url'])        
     return msg
 
 
